@@ -1,16 +1,28 @@
-import { NgModule } from '@angular/core';
+import {Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { RouterModule } from '@angular/router';
+
 import { AppComponent } from './app.component';
+import { FrameworkComponent } from './framework/framework.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FrameworkComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    RouterModule.forRoot([
+      {
+        path: "",
+        component: AppComponent
+      }
+    ])
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [FrameworkComponent]
 })
 export class AppModule { }
