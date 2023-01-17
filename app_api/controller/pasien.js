@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const pasien = mongoose.model("Pasien");
 
-const psnList = (req, res) => {
+const pasienList = (req, res) => {
     pasien.find({},
         function (err, result){
             if(err){
@@ -12,14 +12,11 @@ const psnList = (req, res) => {
                 });
             } else {
                 res.status(200)
-                .json({
-                    "satatus": "success",
-                    "data": result
-                });
+                .json(result);
             }
         });
 }
-const psnCreate = (req, res) => {
+const pasienCreate = (req, res) => {
     pasien.create({
         nama: req.body.nama,
         tgl_lahir: req.body.tgl_lahir,
@@ -43,30 +40,30 @@ const psnCreate = (req, res) => {
         }
     });
 }
-const psnReadOne = (req, res) => {
+const pasienReadOne = (req, res) => {
     pasien
         .findById(req.params.id)
-        .exec((err,psn) => {
+        .exec((err,pasien) => {
             res
                 .status(200)
                 .json(psn);
         });
 }
-const psnUpdateOne = (req, res) => {
+const pasienUpdateOne = (req, res) => {
     pasien
         .findById(req.params.id)
-        .exec((err, psn) => {
-            psn.nama = req.body.nama,
-            psn.tgl_lahir = req.body.tgl_lahir,
-            psn.tempat_lahir = req.body.tmpt_lahir,
-            psn.jenis_kelamin = req.body.jenis_kelamin,
-            psn.umur = req.body.umur,
-            psn.gol_darah = req.body.gol_darah,
-            psn.tinggi_badan = req.body.tinggi_badan,
-            psn.berat_badan = req.body.berat_badan,
-            psn.alamat = req.body.alamat,
-            psn.no_tlpn = req.body.no_tlpn;
-            psn.save((err, result) => {
+        .exec((err, pasien) => {
+            pasien.nama = req.body.nama,
+            pasien.tgl_lahir = req.body.tgl_lahir,
+            pasien.tempat_lahir = req.body.tmpt_lahir,
+            pasien.jenis_kelamin = req.body.jenis_kelamin,
+            pasien.umur = req.body.umur,
+            pasien.gol_darah = req.body.gol_darah,
+            pasien.tinggi_badan = req.body.tinggi_badan,
+            pasien.berat_badan = req.body.berat_badan,
+            pasien.alamat = req.body.alamat,
+            pasien.no_tlpn = req.body.no_tlpn;
+            pasien.save((err, result) => {
                 if (err) {
                     res
                         .status(404)
@@ -79,10 +76,10 @@ const psnUpdateOne = (req, res) => {
             });
         })
 }
-const psnDeleteOne = (req, res) => {
+const pasienDeleteOne = (req, res) => {
     pasien
         .findById(req.params.id)
-        .exec((err, psn) => {
+        .exec((err, pasien) => {
             psn.remove((err, result) => {
                 if (err) {
                     res
@@ -96,9 +93,9 @@ const psnDeleteOne = (req, res) => {
         });
 }
 module.exports = {
-    psnCreate,
-    psnDeleteOne,
-    psnList,
-    psnReadOne,
-    psnUpdateOne
+    pasienCreate,
+    pasienDeleteOne,
+    pasienList,
+    pasienReadOne,
+    pasienUpdateOne
 }

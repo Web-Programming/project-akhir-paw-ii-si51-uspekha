@@ -4,15 +4,15 @@ const {
 } = require("express/lib/router");
 var router = express.Router();
 
-const ctrlPsn = require("../controller/pasien");
+const ctrlPasien = require("../controller/pasien");
 
 router.route("/pasien")
-    .get(ctrlPsn.psnList)
-    .post(ctrlPsn.psnCreate);
+    .get(ctrlPasien.pasienList)
+    .post(ctrlPasien.pasienCreate);
 
 router.route("/pasien/:id")
-    .get(ctrlPsn.psnReadOne)
-    .put(ctrlPsn.psnUpdateOne)
-    .delete(ctrlPsn.psnDeleteOne)
+    .get(ctrlPasien.pasienReadOne)
+    .put(ctrlPasien.pasienUpdateOne)
+    .delete(ctrlPasien.pasienDeleteOne)
 
 module.exports = router;
