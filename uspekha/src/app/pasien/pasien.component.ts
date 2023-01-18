@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./pasien.component.css']
 })
 export class PasienComponent {
+  constructor() { }
 
+  ngOnInit():void{
+    
+  }
 }

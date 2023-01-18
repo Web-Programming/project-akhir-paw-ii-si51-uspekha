@@ -25,6 +25,18 @@ import { RmedisComponent } from './rmedis/rmedis.component';
       {
         path: "",
         component: AppComponent
+      },
+      {
+        path: "pasien",
+        component: PasienComponent
+      },
+      {
+        path: "rmedis",
+        component: RmedisComponent
+      },
+      {
+        path: "dokter",
+        component:DokterComponent
       }
     ])
   ],
