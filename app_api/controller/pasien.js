@@ -62,7 +62,7 @@ const pasienUpdateOne = (req, res) => {
             pasien.tinggi_badan = req.body.tinggi_badan,
             pasien.berat_badan = req.body.berat_badan,
             pasien.alamat = req.body.alamat,
-            pasien.no_tlpn = req.body.no_tlpn;
+            pasien.no_tlpn = req.body.no_tlpn
             pasien.save((err, result) => {
                 if (err) {
                     res
@@ -80,7 +80,7 @@ const pasienDeleteOne = (req, res) => {
     pasien
         .findById(req.params.id)
         .exec((err, pasien) => {
-            psn.remove((err, result) => {
+            pasien.remove((err, result) => {
                 if (err) {
                     res
                         .satatus(404)

@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-
 const schemaPasien = new mongoose.Schema({
     nama: String,
     tgl_lahir: String,
@@ -14,4 +13,4 @@ const schemaPasien = new mongoose.Schema({
     no_tlpn: String,
 
 });
-mongoose.model("Pasien", schemaPasien, "psn")
+mongoose.model("Pasien", schemaPasien, "pasien")

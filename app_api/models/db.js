@@ -19,3 +19,5 @@ mongoose.connection.on("disconnected", () => {
 });
 //memanggil model
 require("./pasien");
+require("./dokter");
+require("./rmedis");
