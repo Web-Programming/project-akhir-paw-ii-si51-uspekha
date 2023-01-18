@@ -6,11 +6,17 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { FrameworkComponent } from './framework/framework.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PasienComponent } from './pasien/pasien.component';
+import { DokterComponent } from './dokter/dokter.component';
+import { RmedisComponent } from './rmedis/rmedis.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FrameworkComponent
+    FrameworkComponent,
+    PasienComponent,
+    DokterComponent,
+    RmedisComponent
   ],
   imports: [
     BrowserModule,
