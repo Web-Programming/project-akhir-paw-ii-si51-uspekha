@@ -1,2 +1,133 @@
-<p>dokter works!</p>
-<h1>DESIGN TABLE DOKTER DISINI</h1>
+<!-- silahkan desain halaman ini yang menampilkan
+1. table(no, nama, jenis, tgl_surat, aksi)
+2. button create / add /tambah surat -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Dokter</title>
+</head>
+<body>
+    
+</body>
+</html> -->
+
+<hr>
+<div class="container mt-5">
+    <div class="center">
+        <h1 class="display-5 mb-5"><strong>Data Dokter</strong></h1>
+    </div>
+    <div class="main row justify-content-center">
+        <form action="" id="form-pasien" class="row justify-content-center mb-4" autocomplete="off">
+          <div class="col-10">
+            <div class="col-10 mb-3">
+                <label for="nama">Nama Dokter</label>
+                <input class="form-control" id="nama" type="text" placeholder="Masukkan Nama Dokter">
+            </div>
+            <div class="col-10 mb-3">
+                <label for="jenis_kelamin">Jenis Kelamin</label>
+                <input class="form-control" id="jenis_kelamin" type="text" placeholder="Masukkan Jenis Kelamin">
+            </div>
+            <div class="col-10 mb-3">
+                <label for="umur">Umur</label>
+                <input class="form-control" id="umur" type="text" placeholder="Masukkan Umur Dokter">
+            </div>
+            <div class="col-10 mb-3">
+                <label for="spesialis">Jenis Spesialis</label>
+                <input class="form-control" id="spesialis" type="text" placeholder="Masukkan Spesialis Dokter">
+            </div>
+            <div class="col-10 mb-3">
+                <label for="alamat">Alamat</label>
+                <input class="form-control" id="alamat" type="text" placeholder="Masukkan Alamat Dokter">
+            </div>
+            <div class="col-10 mb-3">
+                <label for="no_tlpn">Nomor Telepon</label>
+                <input class="form-control" id="no_tlpn" type="text" placeholder="Masukkan Nomor Telepon">
+            </div>
+    
+            <div class="col-10">
+                <input class="btn btn-success add-btn" type="submit" value="Tambah Info">
+            </div>
+            
+          </div>
+        </form>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <th>No.</th>
+        <th>Nama</th>
+        <th>Jenis Kelamin</th>
+        <th>Umur</th>
+        <th>Jenis Spesialis</th>
+        <th>Alamat</th>
+        <th>Nomor Telepon</th>
+        <th>Aksi</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dokter of listDokter; let no = index;">
+            <td data-label="No.">{{no+1}}</td>
+            <td data-label="Nama">{{dokter.nama}}</td>
+            <td data-label="Jenis Kelamin">{{dokter.jenis_kelamin}}</td>
+            <td data-label="Umur">{{dokter.umur}}</td>
+            <td data-label="Jenis Spesialis">{{dokter.spesialis}}</td>
+            <td data-label="Alamat">{{dokter.alamat}}</td>
+            <td data-label="Nomor Telepon">{{dokter.no_tlpn}}</td>
+            <div class="boxx">
+                <!-- <a routerLink="/dokter/{{dokter._id}}" class="btn btn-info">Detail</a> -->
+                <button type="button" class="btn btn-primary">Edit</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </div>
+        </tr>
+
+        <!-- <tr>
+            <td data-label="No.">3.</td>
+            <td data-label="Nama">Sunny</td>
+            <td data-label="Jenis">Surat Keputusan</td>
+            <td data-label="Tanggal Surat">02 November 2022</td>
+            <div class="boxx">
+                <button type="button" class="btn btn-primary">Edit</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </div>
+        </tr>
+
+        <tr>
+            <td data-label="No.">4.</td>
+            <td data-label="Nama">Sage</td>
+            <td data-label="Jenis">Surat Delegasi</td>
+            <td data-label="Tanggal Surat">16 November 2022</td>
+            <div class="boxx">
+                <button type="button" class="btn btn-primary">Edit</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </div>
+        </tr>
+
+        <tr>
+            <td data-label="No.">5.</td>
+            <td data-label="Nama">Omen</td>
+            <td data-label="Jenis">Surat Dinas</td>
+            <td data-label="Tanggal Surat">16 November 2022</td>
+            <div class="boxx">
+                <button type="button" class="btn btn-primary">Edit</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </div>
+        </tr>
+
+        <tr>
+            <td data-label="No.">6.</td>
+            <td data-label="Nama">Reyna</td>
+            <td data-label="Jenis">Surat Pribadi</td>
+            <td data-label="Tanggal Surat">15 November 2022</td>
+            <div class="boxx">
+                <button type="button" class="btn btn-primary">Edit</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </div>
+        </tr> -->
+    </tbody>
+</table>
+<div class="box">
+    <button type="button" class="btn btn-success">Tambah Info</button>
+</div>	
