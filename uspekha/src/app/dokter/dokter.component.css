@@ -46,7 +46,6 @@ body{
 .boxx{
     display: flex;
     justify-content: space-evenly;
-	margin: 5px;
 }
 
 /*responsive*/

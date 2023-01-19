@@ -48,7 +48,7 @@
             </div>
     
             <div class="col-10">
-                <input class="btn btn-success add-btn" type="submit" value="Tambah Info">
+                <input class="btn btn-success add-btn" type="submit" value="Tambah Rekam Medis">
             </div>
             
           </div>
@@ -56,7 +56,7 @@
     </div>
 </div>
 
-<table class="table">
+<table class="table table-striped table-dark">
     <thead>
         <th>No.</th>
         <th>Nomor Rekam Medis</th>
@@ -76,15 +76,14 @@
             <td data-label="Keluhan Pasien">{{rmedis.keluhan}}</td>
             <td data-label="Diagnosis Terduga">{{rmedis.diagnosis}}</td>
             <td data-label="Jenis Pengobatan">{{rmedis.jenis_pengobatan}}</td>
-            <div class="boxx">
-                <!-- <a routerLink="/rmedis/{{rmedis._id}}" class="btn btn-info">Detail</a> -->
-                <button type="button" class="btn btn-primary">Edit</button>
-                <button type="button" class="btn btn-danger">Delete</button>
-            </div>
+            <td>
+                <input class="btn btn-primary btn-sm; fa fa-refresh" type="submit" value="Edit">
+                <input class="btn btn-danger btn-sm; fa fa-trash" type="submit" value="Delete">
+            </td>
         </tr>
 
     </tbody>
 </table>
 <div class="box">
-    <button type="button" class="btn btn-success">Tambah</button>
+    <button type="button" class="btn btn-success">Tambah Rekam Medis</button>
 </div>	
