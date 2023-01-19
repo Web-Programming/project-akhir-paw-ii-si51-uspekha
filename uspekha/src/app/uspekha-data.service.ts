@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Pasien } from './pasien/pasien.component';
 import { Dokter } from "./dokter/dokter.component";
+import { Rmedis } from "./rmedis/rmedis.component";
 
 @Injectable({
     providedIn: 'root'
@@ -23,7 +24,12 @@ export class UspekhaDataService{
     public getListDokter(): Promise<Dokter[]> {
         const url: string = `${this.apiBaseUrl}/surat`; //apiurl/surat
         return this.http.get(url).toPromise().then(response => response as Dokter[]).catch(this.handleError);
-      }
+    }
+
+    public getListRmedis(): Promise<Rmedis[]> {
+        const url: string = `${this.apiBaseUrl}/surat`; //apiurl/surat
+        return this.http.get(url).toPromise().then(response => response as Rmedis[]).catch(this.handleError);
+    }
 
 
     private handleError(error:any): Promise<any>{
