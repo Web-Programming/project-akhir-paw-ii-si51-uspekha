@@ -1,2 +1,99 @@
-<p>pasien works!</p>
-<h1>DESIGN TABLE PASIEN DISINI</h1>
+<hr>
+<div class="container mt-5">
+  <div class="text-center">
+    <h1 class="display-5 mb-5"><strong>DATA Pasien</strong></h1>
+  </div>
+  <div class="main row justify-content-center">
+    <form action="" id="form-pasien" class="row justify-content-center mb-4" autocomplete="off">
+      <div class="col-10">
+        <div class="col-10 mb-3">
+            <label for="nama">Nama Pasien</label>
+            <input class="form-control" id="nama" type="text" placeholder="Masukkan Nama Pasien">
+        </div>
+        <div class="col-10 mb-3">
+            <label for="tgl_lahir">Tanggal Lahir</label>
+            <input class="form-control" id="tgl_lahir" type="text" placeholder="Masukkan Tanggal Lahir Pasien">
+        </div>
+        <div class="col-10 mb-3">
+            <label for="tempat_lahir">Tempat Lahir</label>
+            <input class="form-control" id="tempat_lahir" type="text" placeholder="Masukkan Tempat Lahir Pasien">
+        </div>
+        <div class="col-10 mb-3">
+            <label for="jenis_kelamin">Jenis Kelamin</label>
+            <input class="form-control" id="jenis_kelamin" type="text" placeholder="Masukkan Jenis Kelamin Pasien">
+        </div>
+        <div class="col-10 mb-3">
+            <label for="umur">Umur</label>
+            <input class="form-control" id="umur" type="text" placeholder="Masukkan Umur Pasien">
+        </div>
+        <div class="col-10 mb-3">
+            <label for="gol_darah">Golongan Darah</label>
+            <input class="form-control" id="gol_darah" type="text" placeholder="Masukkan Golongan Darah Pasien">
+        </div>
+        <div class="col-10 mb-3">
+            <label for="tinggi_badan">Tinggi Badan</label>
+            <input class="form-control" id="tinggi_badan" type="text" placeholder="Masukkan Tinggi Badan Pasien">
+        </div>
+        <div class="col-10 mb-3">
+            <label for="berat_badan">Berat Badan</label>
+            <input class="form-control" id="berat_badan" type="text" placeholder="Masukkan Berat Badan Pasien">
+        </div>
+        <div class="col-10 mb-3">
+            <label for="alamat">Alamat</label>
+            <input class="form-control" id="alamat" type="text" placeholder="Masukkan Alamat Pasien">
+        </div>
+        <div class="col-10 mb-3">
+            <label for="no_tplpn">No Telepon</label>
+            <input class="form-control" id="no_tplpn" type="text" placeholder="Masukkan No Telepon Pasien">
+        </div>
+
+        <div class="col-10">
+            <input class="btn btn-success add-btn" type="submit" value="Tambah Pasien">
+        </div>
+        
+      </div>
+    </form>
+    <div class="col-10 mt-5">
+      <table class="table table-striped table-dark" style="align-items: center;">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Tanggal Lahir</th>
+            <th>Tempat lahir</th>
+            <th>Jenis kelamin</th>
+            <th>Umur</th>
+            <th>Golongan darah</th>
+            <th>Tinggi badan</th>
+            <th>Berat badan</th>
+            <th>Alamat</th>
+            <th>No tlpn</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="pasien-list">
+          <tr *ngFor="let pasien of listpasien;let no = index;">
+            <th scope="row">{{no+1}}</th>
+            <th>{{pasien.nama}}</th>
+            <th>{{pasien.tgl_lahir}}</th>
+            <th>{{pasien.tempat_lahir}}</th>
+            <th>{{pasien.jenis_kelamin}}</th>
+            <th>{{pasien.umur}}</th>
+            <th>{{pasien.gol_darah}}</th>
+            <th>{{pasien.tinggi_badan}}</th>
+            <th>{{pasien.berat_badan}}</th>
+            <th>{{pasien.alamat}}</th>
+            <th>{{pasien.no_tlpn}}</th>
+            <th>
+              <input class="btn btn-primary btn-sm; fa fa-refresh" type="submit" value="Edit">
+              <input class="btn btn-danger btn-sm; fa fa-trash" type="submit" value="Delete">
+            </th>
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+
