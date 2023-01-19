@@ -22,12 +22,12 @@ export class UspekhaDataService{
     }
 
     public getListDokter(): Promise<Dokter[]> {
-        const url: string = `${this.apiBaseUrl}/surat`; //apiurl/surat
+        const url: string = `${this.apiBaseUrl}/surat`; 
         return this.http.get(url).toPromise().then(response => response as Dokter[]).catch(this.handleError);
     }
 
     public getListRmedis(): Promise<Rmedis[]> {
-        const url: string = `${this.apiBaseUrl}/surat`; //apiurl/surat
+        const url: string = `${this.apiBaseUrl}/surat`; 
         return this.http.get(url).toPromise().then(response => response as Rmedis[]).catch(this.handleError);
     }
 
