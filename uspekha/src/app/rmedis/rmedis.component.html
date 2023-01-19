@@ -1,2 +1,90 @@
-<p>rmedis works!</p>
-<h1>DESIGN TABLE REKAM MEDIS DISINI</h1>
+<!-- silahkan desain halaman ini yang menampilkan
+1. table(no, nama, jenis, tgl_surat, aksi)
+2. button create / add /tambah surat -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Rmedis</title>
+</head>
+<body>
+    
+</body>
+</html> -->
+
+<hr>
+<div class="container mt-5">
+    <div class="center">
+        <h1 class="display-5 mb-5"><strong>Data Rekam Medic</strong></h1>
+    </div>
+    <div class="main row justify-content-center">
+        <form action="" id="form-pasien" class="row justify-content-center mb-4" autocomplete="off">
+          <div class="col-10">
+            <div class="col-10 mb-3">
+                <label for="no_rekam_medis">Nomor Rekam Medis</label>
+                <input class="form-control" id="no_rekam_medis" type="text" placeholder="Masukkan Nomor">
+            </div>
+            <div class="col-10 mb-3">
+                <label for="tanggal">Tanggal</label>
+                <input class="form-control" id="tanggal" type="text" placeholder="Masukkan Tanggal">
+            </div>
+            <div class="col-10 mb-3">
+                <label for="nama_pasien">Nama Pasien</label>
+                <input class="form-control" id="nama_pasien" type="text" placeholder="Masukkan Nama Pasien">
+            </div>
+            <div class="col-10 mb-3">
+                <label for="keluhan">Keluhan Pasien</label>
+                <input class="form-control" id="keluhan" type="text" placeholder="Masukkan Keluhan Pasien">
+            </div>
+            <div class="col-10 mb-3">
+                <label for="diagnosis">Diagnosis Terduga</label>
+                <input class="form-control" id="diagnosis" type="text" placeholder="Masukkan Diagnosis">
+            </div>
+            <div class="col-10 mb-3">
+                <label for="jenis_pengobatan">Jenis Pengobatan</label>
+                <input class="form-control" id="jenis_pengobatan" type="text" placeholder="Masukkan Jenis Pengobatan">
+            </div>
+    
+            <div class="col-10">
+                <input class="btn btn-success add-btn" type="submit" value="Tambah Info">
+            </div>
+            
+          </div>
+        </form>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <th>No.</th>
+        <th>Nomor Rekam Medis</th>
+        <th>Tanggal</th>
+        <th>Nama Pasien</th>
+        <th>Keluhan Pasien</th>
+        <th>Diagnosis Terduga</th>
+        <th>Jenis Pengobatan</th>
+        <th>Aksi</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rmedis of listRmedis; let no = index;">
+            <td data-label="No.">{{no+1}}</td>
+            <td data-label="Nomor Rekam Medis">{{rmedis.no_rekam_medis}}</td>
+            <td data-label="Tanggal">{{rmedis.tanggal}}</td>
+            <td data-label="Nama Pasien">{{rmedis.nama_pasien}}</td>
+            <td data-label="Keluhan Pasien">{{rmedis.keluhan}}</td>
+            <td data-label="Diagnosis Terduga">{{rmedis.diagnosis}}</td>
+            <td data-label="Jenis Pengobatan">{{rmedis.jenis_pengobatan}}</td>
+            <div class="boxx">
+                <!-- <a routerLink="/rmedis/{{rmedis._id}}" class="btn btn-info">Detail</a> -->
+                <button type="button" class="btn btn-primary">Edit</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </div>
+        </tr>
+
+    </tbody>
+</table>
+<div class="box">
+    <button type="button" class="btn btn-success">Tambah</button>
+</div>	
